@@ -1,0 +1,39 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  addProduct(newProductData: NewProductInput!): Product!
+  removeProduct(id: Float!): Boolean!
+}
+
+input NewProductInput {
+  description: String
+  imageUrl: String
+  price: Float!
+  productCode: String!
+  productName: String!
+  releaseDate: String!
+  starRating: Float!
+}
+
+"""product"""
+type Product {
+  description: String
+  imageUrl: String
+  price: Float!
+  productCode: String!
+  productId: ID!
+  productName: String!
+  releaseDate: String!
+  starRating: Float!
+}
+
+type Query {
+  product(id: Float!): Product!
+  products(skip: Int! = 0, take: Int! = 25): [Product!]!
+}
+
+type Subscription {
+  productAdded: Product!
+}

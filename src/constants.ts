@@ -1,0 +1,3 @@
+export const SEQUELIZE = 'SEQUELIZE';
+
+export const PRODUCTS_REPOSITORY = 'PRODUCTS_REPOSITORY';
